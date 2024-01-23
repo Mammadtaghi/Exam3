@@ -1,0 +1,29 @@
+#Nav{
+    height: 80px;
+    padding: 0 3em;
+    
+    .container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logoContainer{
+            height: 30px;
+            width: max-content;
+        }
+
+        .NavList{
+            display: flex;
+            align-items: center;
+            column-gap: 1em;
+        }
+
+        .iconBox{
+            display: flex;
+            align-items: center;
+            column-gap: 1em;
+        }
+    }
+}

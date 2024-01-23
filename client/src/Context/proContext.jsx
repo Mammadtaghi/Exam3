@@ -8,11 +8,14 @@ export const ProProvider = ({ children }) => {
 
     const [Pro, setPro] = useState([])
 
+    const [isLoading, setisLoading] = useState(true)
+
     async function GetPros() {
         try {
             const res = await axios("http://localhost:3000/pro")
             console.log(res.data);
             setPro(res.data)
+            setisLoading(false)
         } catch (error) {
             console.log(error);
         }
@@ -22,7 +25,7 @@ export const ProProvider = ({ children }) => {
         GetPros()
     }, [])
 
-    const data = { Pro, setPro, GetPros }
+    const data = { Pro, setPro, GetPros, isLoading }
 
     return (
         <proContext.Provider value={data}>

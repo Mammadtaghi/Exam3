@@ -26,10 +26,10 @@ app.post("/pro", async (req, res) => {
         const pros = await Pro.create({
             title,
             image,
-            price
+            price: +price
         })
         await pros.save()
-        res.status(200).send(pros)
+        res.status(200).send("Created")
     } catch (error) {
         res.status(500).send("Ewrroor")
     }
@@ -58,7 +58,7 @@ app.delete("/pro/:id", async (req, res) => {
     try {
         const { id } = req.params
         const pros = await Pro.findByIdAndDelete(id)
-        res.status(200).send(pros)
+        res.status(200).send("Deleted")
     } catch (error) {
         res.status(500).send("Ewrroor")
     }
