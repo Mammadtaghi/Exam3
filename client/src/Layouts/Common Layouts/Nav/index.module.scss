@@ -1,29 +1,159 @@
-#Nav{
+#Nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
     height: 80px;
     padding: 0 3em;
-    
-    .container{
+    background-color: white;
+
+    .container {
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .logoContainer{
+        .logoContainer {
             height: 30px;
             width: max-content;
         }
 
-        .NavList{
+        .NavList {
+            display: flex;
+            align-items: center;
+            column-gap: 1em;
+
+            .NavLink {
+                position: relative;
+                font-weight: 600;
+                transition: 0.3s;
+
+                .count {
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                }
+
+                &:hover {
+                    color: red;
+                }
+
+                &:global.active {
+                    color: red;
+                }
+            }
+        }
+
+        .iconBox {
             display: flex;
             align-items: center;
             column-gap: 1em;
         }
 
-        .iconBox{
+        .toggleBar {
+            display: none;
+        }
+
+        .resNav {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:1150px) {
+    #Nav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        height: 80px;
+        padding: 0 3em;
+        background-color: white;
+
+        .container {
+            height: 100%;
+            width: 100%;
             display: flex;
             align-items: center;
-            column-gap: 1em;
+            justify-content: space-between;
+
+            .logoContainer {
+                height: 30px;
+                width: max-content;
+            }
+
+            .NavList {
+                display: none;
+                align-items: center;
+                column-gap: 1em;
+
+                .NavLink {
+                    position: relative;
+                    font-weight: 600;
+                    transition: 0.3s;
+
+                    .count {
+                        position: absolute;
+                        top: -10px;
+                        right: -10px;
+                    }
+
+                    &:hover {
+                        color: red;
+                    }
+
+                    &:global.active {
+                        color: red;
+                    }
+                }
+            }
+
+            .iconBox {
+                display: none;
+            }
+
+            .toggleBar {
+                cursor: pointer;
+                display: block;
+                font-size: 30px;
+            }
+
+            .resNav {
+                background-color: #353535;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: white;
+                transition: 0.3s;
+
+                .NavLink {
+                    padding: 1em 0;
+                    position: relative;
+                    font-weight: 600;
+                    transition: 0.3s;
+
+                    .count {
+                        position: absolute;
+                        top: 0px;
+                        right: -10px;
+                    }
+
+                    &:hover {
+                        color: red;
+                    }
+
+                    &:global.active {
+                        color: red;
+                    }
+                }
+            }
         }
     }
 }

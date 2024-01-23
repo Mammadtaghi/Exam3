@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import style from "./index.module.scss";
 import { useBasket } from '../../Context/basketContext';
+import { Link } from 'react-router-dom';
 
 function BasketPage() {
 
