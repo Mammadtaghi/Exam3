@@ -16,7 +16,12 @@ export const WishlistProvider = ({ children }) => {
         setWishlist(Wishlist.filter(x => x._id !== item._id))
     }
 
-    const data = { Wishlist, setWishlist, UpdateWishlist }
+    function isIn(item) {
+        const Found = Wishlist.find(x => x._id === item._id)
+        return Found ? true : false
+    }
+
+    const data = { Wishlist, setWishlist, UpdateWishlist, isIn }
 
     return (
         <wishlistContext.Provider value={data}>

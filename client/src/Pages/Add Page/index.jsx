@@ -17,8 +17,9 @@ function AddPage() {
     function CheckStr(item) {
         if (typeof item === "string") {
             return item.toLowerCase()
+        } else {
+            return item
         }
-        return item
     }
 
     async function Post(values) {
@@ -78,7 +79,7 @@ function AddPage() {
                         <button type="submit">Add</button>
                     </Form>
                 </Formik>
-                <input type="text" onClick={(e) => setSearch(e.target.value)} />
+                <input type="text" onChange={(e) => setSearch(e.target.value)} />
                 <button onClick={() => setSort(null)}>Default</button>
                 <button onClick={() => setSort({ property: 'title', asc: true })}>A-Z</button>
                 <button onClick={() => setSort({ property: 'title', asc: false })}>Z-A</button>
@@ -99,8 +100,10 @@ function AddPage() {
                                 .sort((a, b) => {
                                     if (sort && sort.asc) {
                                         return (CheckStr(a[sort.property]) > CheckStr(b[sort.property])) ? 1 : ((CheckStr(b[sort.property]) > CheckStr(a[sort.property])) ? -1 : 0)
-                                    } else if (sort && sort.asc) {
+                                    } else if (sort && sort.asc === false) {
                                         return (CheckStr(a[sort.property]) < CheckStr(b[sort.property])) ? 1 : ((CheckStr(b[sort.property]) < CheckStr(a[sort.property])) ? -1 : 0)
+                                    } else {
+                                        return null
                                     }
                                 })
                                 .map(item => (

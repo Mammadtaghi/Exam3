@@ -43,11 +43,18 @@ export const BasketProvider = ({ children }) => {
             return
         }
         let BasketCopy = [...Basket]
-        BasketCopy[index].count++
-        setBasket(BasketCopy)
+        if (BasketCopy[index].count > 1) {
+            BasketCopy[index].count--
+            setBasket(BasketCopy)
+        }
     }
 
-    const data = { Basket, setBasket, AddBasket, RemoveBasket, Increase, Decrease }
+    function SubTotal() {
+        const Sub =  Basket.reduce((total, item) => total += (item.count * +item.price), 0)
+        return Sub
+    }
+
+    const data = { Basket, setBasket, AddBasket, RemoveBasket, Increase, Decrease, SubTotal }
 
     return (
         <basketContext.Provider value={data}>
