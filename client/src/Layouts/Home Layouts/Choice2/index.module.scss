@@ -1,0 +1,171 @@
+#Chioce2 {
+    padding: 7em 3em;
+
+    .container {
+        height: 100%;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .leftSide {
+            padding-left: 10em;
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            row-gap: 3em;
+
+            .title {
+                font-size: 50px;
+            }
+
+            .info {
+                max-width: 450px;
+                line-height: 2em;
+                color: grey;
+            }
+
+            .show {
+                color: white;
+                padding: 1em 2em;
+                background-color: red;
+                font-size: 17px;
+                font-weight: 500;
+                border: 0;
+            }
+        }
+
+        .rightSide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+            .imgBox {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    #Chioce2 {
+        padding: 7em 3em;
+
+        .container {
+            height: 100%;
+            width: 100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 3em;
+
+            .leftSide {
+                padding-left: 10em;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                row-gap: 3em;
+
+                .title {
+                    font-size: 50px;
+                }
+
+                .info {
+                    max-width: 450px;
+                    line-height: 2em;
+                    color: grey;
+                }
+
+                .show {
+                    color: white;
+                    padding: 1em 2em;
+                    background-color: red;
+                    font-size: 17px;
+                    font-weight: 500;
+                    border: 0;
+                }
+            }
+
+            .rightSide {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+                .imgBox {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:560px) {
+    #Chioce2 {
+        padding: 7em 3em;
+
+        .container {
+            height: 100%;
+            width: 100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 3em;
+
+            .leftSide {
+                padding-left: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                row-gap: 3em;
+
+                .title {
+                    font-size: 50px;
+                }
+
+                .info {
+                    max-width: 450px;
+                    line-height: 2em;
+                    color: grey;
+                }
+
+                .show {
+                    color: white;
+                    padding: 1em 2em;
+                    background-color: red;
+                    font-size: 17px;
+                    font-weight: 500;
+                    border: 0;
+                }
+            }
+
+            .rightSide {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+                .imgBox {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

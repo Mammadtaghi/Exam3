@@ -1,0 +1,149 @@
+#Hero {
+    height: 100vh;
+    padding: 7em 3em;
+    background-color: whitesmoke;
+
+    .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .textBox {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            row-gap: 4em;
+
+            .title{
+                max-width: 1000px;
+                word-wrap: break-word;
+                color: #0b1c39;
+                font-size: 6em;
+                font-weight: 700;
+            }
+
+            .info{
+                word-wrap: break-word;
+            }
+
+            .show {
+                color: white;
+                padding: 1em 2em;
+                background-color: gray;
+                font-size: 17px;
+                font-weight: 500;
+                border: 0;
+            }
+        }
+
+        .imgBox{
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    #Hero {
+        height: 100vh;
+        padding: 7em 3em;
+        background-color: whitesmoke;
+    
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .textBox {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                row-gap: 4em;
+    
+                .title{
+                    max-width: 1000px;
+                    word-wrap: break-word;
+                    color: #0b1c39;
+                    font-size: 6em;
+                    font-weight: 700;
+                }
+    
+                .info{
+                    word-wrap: break-word;
+                }
+    
+                .show {
+                    color: white;
+                    padding: 1em 2em;
+                    background-color: gray;
+                    font-size: 17px;
+                    font-weight: 500;
+                    border: 0;
+                }
+            }
+    
+            .imgBox{
+                display: none;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    #Hero {
+        height: 100vh;
+        padding: 7em 3em;
+        background-color: whitesmoke;
+    
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .textBox {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                row-gap: 4em;
+    
+                .title{
+                    max-width: 1000px;
+                    word-wrap: break-word;
+                    color: #0b1c39;
+                    font-size: 6em;
+                    font-weight: 700;
+                }
+    
+                .info{
+                    word-wrap: break-word;
+                }
+    
+                .show {
+                    color: white;
+                    padding: 1em 2em;
+                    background-color: gray;
+                    font-size: 17px;
+                    font-weight: 500;
+                    border: 0;
+                }
+            }
+    
+            .imgBox{
+                display: none;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -58,6 +58,9 @@
         .icon {
             cursor: pointer;
             font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5em;
         }
     }
 }
